@@ -6,12 +6,12 @@ const ComponentModel = require('./models/Components')
 const app = express()
 app.use(cors({
     origin: ["http://localhost:5173", "http://localhost:4173",
-     "https://PR5front.onrender.com"]
+     "https://pr5front.onrender.com"]
 }))
 
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://pavel:12345qwert@cluster0.4yzizhy.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp')
+mongoose.connect('mongodb+srv://pavel:12345qwert@cluster0.4yzizhy.mongodb.net/?retryWrites=true&w=majority')
 
 app.get('/', (req, res) => {
     ComponentModel.find({})
