@@ -11,7 +11,7 @@ app.use(cors({
 
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://pavel:12345qwert@cluster0.4yzizhy.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://pavel:12345qwert@cluster0.4yzizhy.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp')
 
 app.get('/', (req, res) => {
     ComponentModel.find({})
